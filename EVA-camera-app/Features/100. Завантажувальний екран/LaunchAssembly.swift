@@ -27,7 +27,7 @@ final class LaunchAssembly {
         let viewModel: LaunchViewModel = LaunchViewModel(permissionService: permissionService)
         let view: LaunchViewController = LaunchViewController(viewModel: viewModel)
         
-        viewModel.view = view
+        viewModel.delegate = view
         viewModel.output = output
         
         return view

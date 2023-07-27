@@ -16,9 +16,14 @@ protocol ICameraViewModel {
     func didTapCameraMode(index: Int)
 }
 
+protocol CameraViewDelegate: UIViewController {
+    func reloadView(isRecording: Bool)
+    func setupPreviewLayer(with captureSession: AVCaptureSession)
+}
+
 final class CameraViewModel {
     // Dependencies
-    weak var view: ICameraViewController?
+    weak var delegate: CameraViewDelegate?
     private let cameraService: ICameraService
     private let viewModelFactory: ICameraViewModelFactory
     
@@ -40,7 +45,7 @@ extension CameraViewModel: ICameraViewModel {
         cameraService.setDelegate(self)
         cameraService.startRunning { [weak self] captureSession in
             guard let captureSession = captureSession else { return }
-            self?.view?.setupPreviewLayer(with: captureSession)
+            self?.delegate?.setupPreviewLayer(with: captureSession)
         }
     }
     
@@ -62,13 +67,13 @@ extension CameraViewModel: ICameraViewModel {
 
 extension CameraViewModel: CameraServiceDelegate {
     func cameraService(_ cameraService: CameraService, isRecording: Bool) {
-        view?.reloadView(isRecording: isRecording)
+        delegate?.reloadView(isRecording: isRecording)
     }
     
     func cameraServiceError(_ cameraService: CameraService) {
         let alert: AlertModel = viewModelFactory.makeErrorAlertModel()
         
-        view?.showAlert { configurator in
+        delegate?.showAlert { configurator in
             configurator.title = alert.title
             configurator.message = alert.description
             configurator.actions = [.default(title: alert.buttonText)]
@@ -88,7 +93,7 @@ extension CameraViewModel: CameraServiceDelegate {
         
         let alert: AlertModel = viewModelFactory.makeFinishAlertModel(mode: mode)
         
-        view?.showAlert { configurator in
+        delegate?.showAlert { configurator in
             configurator.title = alert.title
             configurator.message = alert.description
             configurator.actions = [.default(title: alert.buttonText)]

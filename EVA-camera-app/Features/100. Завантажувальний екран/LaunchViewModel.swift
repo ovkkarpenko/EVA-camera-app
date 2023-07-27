@@ -15,6 +15,10 @@ protocol ILaunchViewModel {
     func didTapPermission()
 }
 
+protocol LaunchViewDelegate: UIViewController {
+    func reloadView()
+}
+
 enum LaunchState {
     case camera
     case library
@@ -22,7 +26,7 @@ enum LaunchState {
 
 final class LaunchViewModel {
     // Dependencies
-    weak var view: ILaunchViewController?
+    weak var delegate: LaunchViewDelegate?
     weak var output: LaunchModuleOutput?
     private let permissionService: IPermissionService
     
@@ -46,7 +50,7 @@ final class LaunchViewModel {
     }
     
     private func showCameraAccessDeniedAlert() {
-        view?.showAlert(configure: { configurator in
+        delegate?.showAlert(configure: { configurator in
             configurator.title = R.string.localizable.launch_camera_denied_title()
             configurator.message = R.string.localizable.launch_camera_denied_description()
             configurator.actions = [
@@ -59,7 +63,7 @@ final class LaunchViewModel {
     }
     
     private func showLibraryAccessDeniedAlert() {
-        view?.showAlert(configure: { configurator in
+        delegate?.showAlert(configure: { configurator in
             configurator.title = R.string.localizable.launch_library_denied_title()
             configurator.message = R.string.localizable.launch_library_denied_description()
             configurator.actions = [
@@ -90,7 +94,7 @@ extension LaunchViewModel: ILaunchViewModel {
         } else if !permissionService.isGrantedLibraryAccess() {
             state = .library
         }
-        view?.reloadView()
+        delegate?.reloadView()
     }
     
     func didTapPermission() {

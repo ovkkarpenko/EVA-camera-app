@@ -12,10 +12,6 @@ protocol LaunchModuleOutput: AnyObject {
     func launchDidOpenHome()
 }
 
-protocol ILaunchViewController: UIViewController {
-    func reloadView()
-}
-
 final class LaunchViewController: BaseViewController {
     
     // Dependencies
@@ -53,9 +49,9 @@ final class LaunchViewController: BaseViewController {
     }
 }
 
-// MARK: - ILaunchViewController
+// MARK: - LaunchViewDelegate
 
-extension LaunchViewController: ILaunchViewController {
+extension LaunchViewController: LaunchViewDelegate {
     func reloadView() {
         titleLabel.text = viewModel.title
     }

@@ -8,11 +8,6 @@
 import UIKit
 import AVFoundation
 
-protocol ICameraViewController: UIViewController {
-    func reloadView(isRecording: Bool)
-    func setupPreviewLayer(with captureSession: AVCaptureSession)
-}
-
 final class CameraViewController: BaseViewController {
     
     // Dependencies
@@ -65,9 +60,9 @@ final class CameraViewController: BaseViewController {
     }
 }
 
-// MARK: - ICameraViewController
+// MARK: - CameraViewDelegate
 
-extension CameraViewController: ICameraViewController {
+extension CameraViewController: CameraViewDelegate {
     func reloadView(isRecording: Bool) {
         actionButton.setImage(
             isRecording
