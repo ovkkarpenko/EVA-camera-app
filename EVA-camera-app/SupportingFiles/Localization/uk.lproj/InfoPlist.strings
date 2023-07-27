@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  EVA-camera-app
+
+  Created by Alex on 27.07.2023.
+  
+*/
+
+"NSCameraUsageDescription" = "Камера буде використовуватись для зйомки фото/відео";
+"NSPhotoLibraryUsageDescription" = "Галерея необхідна для збереження фото";

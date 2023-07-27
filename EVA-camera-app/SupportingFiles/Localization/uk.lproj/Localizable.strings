@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  EVA-camera-app
+
+  Created by Alex on 27.07.2023.
+  
+*/
+
+"general_ukrainian" = "Українська";
+"general_english" = "Англійська";
+"general_allow" = "Дозволити";
+"general_settings" = "Налаштування";
+"general_cancel" = "Скасувати";
+"general_error" = "Помилка";
+"general_ok" = "OK";
+"general_success" = "Успішно";
+"general_loading" = "Завантаження...";
+"general_unexpected_error" = "Несподівана помилка";
+
+"launch_camera_permission_text" = "Щоб почати, надайте додатку доступ до камери";
+"launch_library_permission_text" = "Надайте додатку доступ до галереї";
+"launch_camera_denied_title" = "Немає доступу до камери";
+"launch_camera_denied_description" = "Перейдіть до налаштувань, щоб надати доступ";
+"launch_library_denied_title" = "Немає доступу до галереї";
+"launch_library_denied_description" = "Перейдіть до налаштувань, щоб надати доступ";
+
+"camera_photo_success" = "Фотографію успішно збережено в галерею";
+"camera_video_success" = "Відео успішно збережено в галерею";
+"camera_mode1" = "Фото";
+"camera_mode2" = "Відео";

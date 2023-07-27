@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  EVA-camera-app
+
+  Created by Alex on 27.07.2023.
+  
+*/
+
+"general_ukrainian" = "Ukrainian";
+"general_english" = "English";
+"general_allow" = "Allow";
+"general_settings" = "Settings";
+"general_cancel" = "Cancel";
+"general_error" = "Error";
+"general_ok" = "OK";
+"general_success" = "Successfully";
+"general_loading" = "Loading...";
+"general_unexpected_error" = "Unexpected error";
+
+"launch_camera_permission_text" = "To get started, grant the app access to the camera";
+"launch_library_permission_text" = "Grant the app access to the gallery";
+"launch_camera_denied_title" = "No access to the camera";
+"launch_camera_denied_description" = "Go to settings to grant access";
+"launch_library_denied_title" = "No access to the gallery";
+"launch_library_denied_description" = "Go to settings to grant access";
+
+"camera_photo_success" = "The photo has been successfully saved to the gallery";
+"camera_video_success" = "The video has been successfully saved to the gallery";
+"camera_mode1" = "Photo";
+"camera_mode2" = "Video";

@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4BD9DE8E34B17E5840DCF20D /* Pods_EVA_camera_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17601917CD39BD7EE1014836 /* Pods_EVA_camera_app.framework */; };
+		FA0800A42A72E514001BFF35 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0800A32A72E514001BFF35 /* CameraService.swift */; };
+		FA0800A72A72E8DB001BFF35 /* HelperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0800A62A72E8DB001BFF35 /* HelperManager.swift */; };
+		FA0800A92A72F0D0001BFF35 /* CameraViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0800A82A72F0D0001BFF35 /* CameraViewModelFactory.swift */; };
+		FA0800AC2A72F101001BFF35 /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0800AB2A72F101001BFF35 /* AlertModel.swift */; };
+		FA60A8452A72B1DC00260CBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8442A72B1DC00260CBD /* AppDelegate.swift */; };
+		FA60A84E2A72B1DE00260CBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA60A84D2A72B1DE00260CBD /* Assets.xcassets */; };
+		FA60A8512A72B1DE00260CBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA60A84F2A72B1DE00260CBD /* LaunchScreen.storyboard */; };
+		FA60A85D2A72B49F00260CBD /* LaunchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A85C2A72B49F00260CBD /* LaunchCoordinator.swift */; };
+		FA60A85F2A72B4C200260CBD /* LaunchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A85E2A72B4C200260CBD /* LaunchAssembly.swift */; };
+		FA60A8612A72B54D00260CBD /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8602A72B54D00260CBD /* LaunchViewModel.swift */; };
+		FA60A8632A72B59F00260CBD /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8622A72B59F00260CBD /* LaunchViewController.swift */; };
+		FA60A8672A72B5F700260CBD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8662A72B5F700260CBD /* BaseViewController.swift */; };
+		FA60A86C2A72B6D700260CBD /* UIAlertController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A86B2A72B6D700260CBD /* UIAlertController+Utils.swift */; };
+		FA60A86E2A72B85400260CBD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA60A86D2A72B85400260CBD /* Colors.xcassets */; };
+		FA60A87D2A72BAFC00260CBD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA60A87F2A72BAFC00260CBD /* InfoPlist.strings */; };
+		FA60A8832A72BB4000260CBD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA60A8852A72BB4000260CBD /* Localizable.strings */; };
+		FA60A88A2A72BDF100260CBD /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8892A72BDF100260CBD /* R.generated.swift */; };
+		FA60A88F2A72C1A700260CBD /* UIAlertAction+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A88E2A72C1A700260CBD /* UIAlertAction+Utils.swift */; };
+		FA60A8912A72C24700260CBD /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8902A72C24700260CBD /* UIViewController+Utils.swift */; };
+		FA60A8932A72C47F00260CBD /* PermissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8922A72C47F00260CBD /* PermissionService.swift */; };
+		FA60A8962A72C68C00260CBD /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8952A72C68C00260CBD /* CameraViewController.swift */; };
+		FA60A8982A72C69000260CBD /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8972A72C69000260CBD /* CameraViewModel.swift */; };
+		FA60A89A2A72C6A500260CBD /* CameraAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8992A72C6A500260CBD /* CameraAssembly.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		17601917CD39BD7EE1014836 /* Pods_EVA_camera_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EVA_camera_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97DDE0C875042DA94D6E931B /* Pods-EVA-camera-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVA-camera-app.release.xcconfig"; path = "Target Support Files/Pods-EVA-camera-app/Pods-EVA-camera-app.release.xcconfig"; sourceTree = "<group>"; };
+		AE00C4A726A8859529336964 /* Pods-EVA-camera-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EVA-camera-app.debug.xcconfig"; path = "Target Support Files/Pods-EVA-camera-app/Pods-EVA-camera-app.debug.xcconfig"; sourceTree = "<group>"; };
+		FA0800A32A72E514001BFF35 /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		FA0800A62A72E8DB001BFF35 /* HelperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperManager.swift; sourceTree = "<group>"; };
+		FA0800A82A72F0D0001BFF35 /* CameraViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModelFactory.swift; sourceTree = "<group>"; };
+		FA0800AB2A72F101001BFF35 /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
+		FA60A8412A72B1DC00260CBD /* EVA-camera-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EVA-camera-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA60A8442A72B1DC00260CBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA60A84D2A72B1DE00260CBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA60A8502A72B1DE00260CBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA60A8522A72B1DE00260CBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA60A85C2A72B49F00260CBD /* LaunchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCoordinator.swift; sourceTree = "<group>"; };
+		FA60A85E2A72B4C200260CBD /* LaunchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAssembly.swift; sourceTree = "<group>"; };
+		FA60A8602A72B54D00260CBD /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		FA60A8622A72B59F00260CBD /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		FA60A8662A72B5F700260CBD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FA60A86B2A72B6D700260CBD /* UIAlertController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Utils.swift"; sourceTree = "<group>"; };
+		FA60A86D2A72B85400260CBD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		FA60A87E2A72BAFC00260CBD /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA60A8802A72BAFF00260CBD /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		FA60A8842A72BB4000260CBD /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA60A8862A72BB4200260CBD /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		FA60A8892A72BDF100260CBD /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		FA60A88E2A72C1A700260CBD /* UIAlertAction+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertAction+Utils.swift"; sourceTree = "<group>"; };
+		FA60A8902A72C24700260CBD /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
+		FA60A8922A72C47F00260CBD /* PermissionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionService.swift; sourceTree = "<group>"; };
+		FA60A8952A72C68C00260CBD /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		FA60A8972A72C69000260CBD /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		FA60A8992A72C6A500260CBD /* CameraAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraAssembly.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA60A83E2A72B1DC00260CBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BD9DE8E34B17E5840DCF20D /* Pods_EVA_camera_app.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4EC6C42CCC2DDD430C144233 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17601917CD39BD7EE1014836 /* Pods_EVA_camera_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D27FBFF5AF9799697D902482 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE00C4A726A8859529336964 /* Pods-EVA-camera-app.debug.xcconfig */,
+				97DDE0C875042DA94D6E931B /* Pods-EVA-camera-app.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FA0800A52A72E8D0001BFF35 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA0800A62A72E8DB001BFF35 /* HelperManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FA0800AA2A72F0F6001BFF35 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA0800AB2A72F101001BFF35 /* AlertModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA0800AD2A72F256001BFF35 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				FA0800A82A72F0D0001BFF35 /* CameraViewModelFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		FA60A8382A72B1DC00260CBD = {
+			isa = PBXGroup;
+			children = (
+				FA60A8432A72B1DC00260CBD /* EVA-camera-app */,
+				FA60A8422A72B1DC00260CBD /* Products */,
+				D27FBFF5AF9799697D902482 /* Pods */,
+				4EC6C42CCC2DDD430C144233 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FA60A8422A72B1DC00260CBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA60A8412A72B1DC00260CBD /* EVA-camera-app.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA60A8432A72B1DC00260CBD /* EVA-camera-app */ = {
+			isa = PBXGroup;
+			children = (
+				FA60A8642A72B5E100260CBD /* Core */,
+				FA60A85A2A72B45E00260CBD /* Features */,
+				FA60A8592A72B29B00260CBD /* SupportingFiles */,
+			);
+			path = "EVA-camera-app";
+			sourceTree = "<group>";
+		};
+		FA60A8592A72B29B00260CBD /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FA60A8882A72BC8C00260CBD /* Generated */,
+				FA60A87A2A72BAC900260CBD /* Localization */,
+				FA60A84D2A72B1DE00260CBD /* Assets.xcassets */,
+				FA60A86D2A72B85400260CBD /* Colors.xcassets */,
+				FA60A8522A72B1DE00260CBD /* Info.plist */,
+				FA60A8442A72B1DC00260CBD /* AppDelegate.swift */,
+				FA60A84F2A72B1DE00260CBD /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		FA60A85A2A72B45E00260CBD /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				FA60A85B2A72B46D00260CBD /* 100. Launch */,
+				FA60A8942A72C5FF00260CBD /* 101. Камера */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		FA60A85B2A72B46D00260CBD /* 100. Launch */ = {
+			isa = PBXGroup;
+			children = (
+				FA60A85C2A72B49F00260CBD /* LaunchCoordinator.swift */,
+				FA60A85E2A72B4C200260CBD /* LaunchAssembly.swift */,
+				FA60A8602A72B54D00260CBD /* LaunchViewModel.swift */,
+				FA60A8622A72B59F00260CBD /* LaunchViewController.swift */,
+			);
+			name = "100. Launch";
+			path = "100. Завантажувальний екран";
+			sourceTree = "<group>";
+		};
+		FA60A8642A72B5E100260CBD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FA0800AA2A72F0F6001BFF35 /* Models */,
+				FA0800A52A72E8D0001BFF35 /* Helpers */,
+				FA60A88B2A72C0F700260CBD /* Services */,
+				FA60A8652A72B5EF00260CBD /* UIKit */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FA60A8652A72B5EF00260CBD /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				FA60A8682A72B67100260CBD /* Extensions */,
+				FA60A8662A72B5F700260CBD /* BaseViewController.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		FA60A8682A72B67100260CBD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA60A86B2A72B6D700260CBD /* UIAlertController+Utils.swift */,
+				FA60A88E2A72C1A700260CBD /* UIAlertAction+Utils.swift */,
+				FA60A8902A72C24700260CBD /* UIViewController+Utils.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA60A87A2A72BAC900260CBD /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				FA60A8852A72BB4000260CBD /* Localizable.strings */,
+				FA60A87F2A72BAFC00260CBD /* InfoPlist.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		FA60A8882A72BC8C00260CBD /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				FA60A8892A72BDF100260CBD /* R.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		FA60A88B2A72C0F700260CBD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA60A8922A72C47F00260CBD /* PermissionService.swift */,
+				FA0800A32A72E514001BFF35 /* CameraService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA60A8942A72C5FF00260CBD /* 101. Камера */ = {
+			isa = PBXGroup;
+			children = (
+				FA0800AD2A72F256001BFF35 /* Factories */,
+				FA60A8992A72C6A500260CBD /* CameraAssembly.swift */,
+				FA60A8972A72C69000260CBD /* CameraViewModel.swift */,
+				FA60A8952A72C68C00260CBD /* CameraViewController.swift */,
+			);
+			path = "101. Камера";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA60A8402A72B1DC00260CBD /* EVA-camera-app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA60A8552A72B1DE00260CBD /* Build configuration list for PBXNativeTarget "EVA-camera-app" */;
+			buildPhases = (
+				6E08CAD63D1F07999A2910C3 /* [CP] Check Pods Manifest.lock */,
+				FA60A8872A72BC6E00260CBD /* RSwift */,
+				FA60A83D2A72B1DC00260CBD /* Sources */,
+				FA60A83E2A72B1DC00260CBD /* Frameworks */,
+				FA60A83F2A72B1DC00260CBD /* Resources */,
+				5E9050CDF07A038B596F3305 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EVA-camera-app";
+			productName = "EVA-camera-app";
+			productReference = FA60A8412A72B1DC00260CBD /* EVA-camera-app.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA60A8392A72B1DC00260CBD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					FA60A8402A72B1DC00260CBD = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = FA60A83C2A72B1DC00260CBD /* Build configuration list for PBXProject "EVA-camera-app" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = uk;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				uk,
+				"en-GB",
+			);
+			mainGroup = FA60A8382A72B1DC00260CBD;
+			productRefGroup = FA60A8422A72B1DC00260CBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA60A8402A72B1DC00260CBD /* EVA-camera-app */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA60A83F2A72B1DC00260CBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA60A8832A72BB4000260CBD /* Localizable.strings in Resources */,
+				FA60A86E2A72B85400260CBD /* Colors.xcassets in Resources */,
+				FA60A87D2A72BAFC00260CBD /* InfoPlist.strings in Resources */,
+				FA60A8512A72B1DE00260CBD /* LaunchScreen.storyboard in Resources */,
+				FA60A84E2A72B1DE00260CBD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E9050CDF07A038B596F3305 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EVA-camera-app/Pods-EVA-camera-app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EVA-camera-app/Pods-EVA-camera-app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EVA-camera-app/Pods-EVA-camera-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E08CAD63D1F07999A2910C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EVA-camera-app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA60A8872A72BC6E00260CBD /* RSwift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = RSwift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$SRCROOT/EVA-camera-app/SupportingFiles/Generated/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/EVA-camera-app/SupportingFiles/Generated/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA60A83D2A72B1DC00260CBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA60A8452A72B1DC00260CBD /* AppDelegate.swift in Sources */,
+				FA60A8632A72B59F00260CBD /* LaunchViewController.swift in Sources */,
+				FA60A8932A72C47F00260CBD /* PermissionService.swift in Sources */,
+				FA60A88A2A72BDF100260CBD /* R.generated.swift in Sources */,
+				FA60A85F2A72B4C200260CBD /* LaunchAssembly.swift in Sources */,
+				FA60A85D2A72B49F00260CBD /* LaunchCoordinator.swift in Sources */,
+				FA0800A92A72F0D0001BFF35 /* CameraViewModelFactory.swift in Sources */,
+				FA60A89A2A72C6A500260CBD /* CameraAssembly.swift in Sources */,
+				FA0800A42A72E514001BFF35 /* CameraService.swift in Sources */,
+				FA60A8612A72B54D00260CBD /* LaunchViewModel.swift in Sources */,
+				FA0800A72A72E8DB001BFF35 /* HelperManager.swift in Sources */,
+				FA60A8912A72C24700260CBD /* UIViewController+Utils.swift in Sources */,
+				FA60A8982A72C69000260CBD /* CameraViewModel.swift in Sources */,
+				FA60A88F2A72C1A700260CBD /* UIAlertAction+Utils.swift in Sources */,
+				FA60A8672A72B5F700260CBD /* BaseViewController.swift in Sources */,
+				FA60A8962A72C68C00260CBD /* CameraViewController.swift in Sources */,
+				FA0800AC2A72F101001BFF35 /* AlertModel.swift in Sources */,
+				FA60A86C2A72B6D700260CBD /* UIAlertController+Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FA60A84F2A72B1DE00260CBD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA60A8502A72B1DE00260CBD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FA60A87F2A72BAFC00260CBD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA60A87E2A72BAFC00260CBD /* uk */,
+				FA60A8802A72BAFF00260CBD /* en-GB */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FA60A8852A72BB4000260CBD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA60A8842A72BB4000260CBD /* uk */,
+				FA60A8862A72BB4200260CBD /* en-GB */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA60A8532A72B1DE00260CBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA60A8542A72B1DE00260CBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA60A8562A72B1DE00260CBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE00C4A726A8859529336964 /* Pods-EVA-camera-app.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R25UMSY775;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EVA-camera-app/SupportingFiles/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Камера буде використовуватись для зйомки фото/відео";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Галерея необхідна для додавання фото до вашого профілю.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.karpenko.EVA-camera-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA60A8572A72B1DE00260CBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97DDE0C875042DA94D6E931B /* Pods-EVA-camera-app.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R25UMSY775;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EVA-camera-app/SupportingFiles/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Камера буде використовуватись для зйомки фото/відео";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Галерея необхідна для додавання фото до вашого профілю.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.karpenko.EVA-camera-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA60A83C2A72B1DC00260CBD /* Build configuration list for PBXProject "EVA-camera-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA60A8532A72B1DE00260CBD /* Debug */,
+				FA60A8542A72B1DE00260CBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA60A8552A72B1DE00260CBD /* Build configuration list for PBXNativeTarget "EVA-camera-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA60A8562A72B1DE00260CBD /* Debug */,
+				FA60A8572A72B1DE00260CBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA60A8392A72B1DC00260CBD /* Project object */;
+}
