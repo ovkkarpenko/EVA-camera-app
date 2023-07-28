@@ -12,13 +12,16 @@
 		FA0800A72A72E8DB001BFF35 /* HelperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0800A62A72E8DB001BFF35 /* HelperManager.swift */; };
 		FA0800A92A72F0D0001BFF35 /* CameraViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0800A82A72F0D0001BFF35 /* CameraViewModelFactory.swift */; };
 		FA0800AC2A72F101001BFF35 /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0800AB2A72F101001BFF35 /* AlertModel.swift */; };
+		FA1002462A737B980065EEA6 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1002452A737B980065EEA6 /* CameraModel.swift */; };
+		FA10024E2A737D130065EEA6 /* LaunchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10024A2A737D130065EEA6 /* LaunchAssembly.swift */; };
+		FA10024F2A737D130065EEA6 /* LaunchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10024B2A737D130065EEA6 /* LaunchCoordinator.swift */; };
+		FA1002502A737D130065EEA6 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10024C2A737D130065EEA6 /* LaunchViewController.swift */; };
+		FA1002512A737D130065EEA6 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10024D2A737D130065EEA6 /* LaunchViewModel.swift */; };
+		FA1002562A737D5F0065EEA6 /* LaunchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1002552A737D5F0065EEA6 /* LaunchModel.swift */; };
+		FA1002582A737D6A0065EEA6 /* LaunchViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1002572A737D6A0065EEA6 /* LaunchViewModelFactory.swift */; };
 		FA60A8452A72B1DC00260CBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8442A72B1DC00260CBD /* AppDelegate.swift */; };
 		FA60A84E2A72B1DE00260CBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA60A84D2A72B1DE00260CBD /* Assets.xcassets */; };
 		FA60A8512A72B1DE00260CBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA60A84F2A72B1DE00260CBD /* LaunchScreen.storyboard */; };
-		FA60A85D2A72B49F00260CBD /* LaunchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A85C2A72B49F00260CBD /* LaunchCoordinator.swift */; };
-		FA60A85F2A72B4C200260CBD /* LaunchAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A85E2A72B4C200260CBD /* LaunchAssembly.swift */; };
-		FA60A8612A72B54D00260CBD /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8602A72B54D00260CBD /* LaunchViewModel.swift */; };
-		FA60A8632A72B59F00260CBD /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8622A72B59F00260CBD /* LaunchViewController.swift */; };
 		FA60A8672A72B5F700260CBD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A8662A72B5F700260CBD /* BaseViewController.swift */; };
 		FA60A86C2A72B6D700260CBD /* UIAlertController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60A86B2A72B6D700260CBD /* UIAlertController+Utils.swift */; };
 		FA60A86E2A72B85400260CBD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA60A86D2A72B85400260CBD /* Colors.xcassets */; };
@@ -41,15 +44,18 @@
 		FA0800A62A72E8DB001BFF35 /* HelperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperManager.swift; sourceTree = "<group>"; };
 		FA0800A82A72F0D0001BFF35 /* CameraViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModelFactory.swift; sourceTree = "<group>"; };
 		FA0800AB2A72F101001BFF35 /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
+		FA1002452A737B980065EEA6 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
+		FA10024A2A737D130065EEA6 /* LaunchAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchAssembly.swift; sourceTree = "<group>"; };
+		FA10024B2A737D130065EEA6 /* LaunchCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchCoordinator.swift; sourceTree = "<group>"; };
+		FA10024C2A737D130065EEA6 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		FA10024D2A737D130065EEA6 /* LaunchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		FA1002552A737D5F0065EEA6 /* LaunchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchModel.swift; sourceTree = "<group>"; };
+		FA1002572A737D6A0065EEA6 /* LaunchViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModelFactory.swift; sourceTree = "<group>"; };
 		FA60A8412A72B1DC00260CBD /* EVA-camera-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EVA-camera-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA60A8442A72B1DC00260CBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA60A84D2A72B1DE00260CBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA60A8502A72B1DE00260CBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA60A8522A72B1DE00260CBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA60A85C2A72B49F00260CBD /* LaunchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCoordinator.swift; sourceTree = "<group>"; };
-		FA60A85E2A72B4C200260CBD /* LaunchAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAssembly.swift; sourceTree = "<group>"; };
-		FA60A8602A72B54D00260CBD /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
-		FA60A8622A72B59F00260CBD /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		FA60A8662A72B5F700260CBD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FA60A86B2A72B6D700260CBD /* UIAlertController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Utils.swift"; sourceTree = "<group>"; };
 		FA60A86D2A72B85400260CBD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -103,20 +109,57 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		FA0800AA2A72F0F6001BFF35 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FA0800AB2A72F101001BFF35 /* AlertModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		FA0800AD2A72F256001BFF35 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
 				FA0800A82A72F0D0001BFF35 /* CameraViewModelFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		FA1002442A737B190065EEA6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA1002452A737B980065EEA6 /* CameraModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA1002492A737D130065EEA6 /* 100. Launch */ = {
+			isa = PBXGroup;
+			children = (
+				FA1002542A737D580065EEA6 /* Models */,
+				FA1002532A737D500065EEA6 /* Factories */,
+				FA10024A2A737D130065EEA6 /* LaunchAssembly.swift */,
+				FA10024B2A737D130065EEA6 /* LaunchCoordinator.swift */,
+				FA10024C2A737D130065EEA6 /* LaunchViewController.swift */,
+				FA10024D2A737D130065EEA6 /* LaunchViewModel.swift */,
+			);
+			path = "100. Launch";
+			sourceTree = "<group>";
+		};
+		FA1002522A737D4A0065EEA6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FA0800AB2A72F101001BFF35 /* AlertModel.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FA1002532A737D500065EEA6 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				FA1002572A737D6A0065EEA6 /* LaunchViewModelFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		FA1002542A737D580065EEA6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA1002552A737D5F0065EEA6 /* LaunchModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FA60A8382A72B1DC00260CBD = {
@@ -164,28 +207,16 @@
 		FA60A85A2A72B45E00260CBD /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				FA60A85B2A72B46D00260CBD /* 100. Launch */,
+				FA1002522A737D4A0065EEA6 /* Common */,
+				FA1002492A737D130065EEA6 /* 100. Launch */,
 				FA60A8942A72C5FF00260CBD /* 101. Камера */,
 			);
 			path = Features;
 			sourceTree = "<group>";
 		};
-		FA60A85B2A72B46D00260CBD /* 100. Launch */ = {
-			isa = PBXGroup;
-			children = (
-				FA60A85C2A72B49F00260CBD /* LaunchCoordinator.swift */,
-				FA60A85E2A72B4C200260CBD /* LaunchAssembly.swift */,
-				FA60A8602A72B54D00260CBD /* LaunchViewModel.swift */,
-				FA60A8622A72B59F00260CBD /* LaunchViewController.swift */,
-			);
-			name = "100. Launch";
-			path = "100. Завантажувальний екран";
-			sourceTree = "<group>";
-		};
 		FA60A8642A72B5E100260CBD /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				FA0800AA2A72F0F6001BFF35 /* Models */,
 				FA0800A52A72E8D0001BFF35 /* Helpers */,
 				FA60A88B2A72C0F700260CBD /* Services */,
 				FA60A8652A72B5EF00260CBD /* UIKit */,
@@ -241,6 +272,7 @@
 		FA60A8942A72C5FF00260CBD /* 101. Камера */ = {
 			isa = PBXGroup;
 			children = (
+				FA1002442A737B190065EEA6 /* Models */,
 				FA0800AD2A72F256001BFF35 /* Factories */,
 				FA60A8992A72C6A500260CBD /* CameraAssembly.swift */,
 				FA60A8972A72C69000260CBD /* CameraViewModel.swift */,
@@ -389,19 +421,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1002582A737D6A0065EEA6 /* LaunchViewModelFactory.swift in Sources */,
 				FA60A8452A72B1DC00260CBD /* AppDelegate.swift in Sources */,
-				FA60A8632A72B59F00260CBD /* LaunchViewController.swift in Sources */,
 				FA60A8932A72C47F00260CBD /* PermissionService.swift in Sources */,
+				FA10024F2A737D130065EEA6 /* LaunchCoordinator.swift in Sources */,
 				FA60A88A2A72BDF100260CBD /* R.generated.swift in Sources */,
-				FA60A85F2A72B4C200260CBD /* LaunchAssembly.swift in Sources */,
-				FA60A85D2A72B49F00260CBD /* LaunchCoordinator.swift in Sources */,
+				FA1002562A737D5F0065EEA6 /* LaunchModel.swift in Sources */,
 				FA0800A92A72F0D0001BFF35 /* CameraViewModelFactory.swift in Sources */,
 				FA60A89A2A72C6A500260CBD /* CameraAssembly.swift in Sources */,
+				FA1002512A737D130065EEA6 /* LaunchViewModel.swift in Sources */,
 				FA0800A42A72E514001BFF35 /* CameraService.swift in Sources */,
-				FA60A8612A72B54D00260CBD /* LaunchViewModel.swift in Sources */,
+				FA1002502A737D130065EEA6 /* LaunchViewController.swift in Sources */,
 				FA0800A72A72E8DB001BFF35 /* HelperManager.swift in Sources */,
+				FA1002462A737B980065EEA6 /* CameraModel.swift in Sources */,
 				FA60A8912A72C24700260CBD /* UIViewController+Utils.swift in Sources */,
 				FA60A8982A72C69000260CBD /* CameraViewModel.swift in Sources */,
+				FA10024E2A737D130065EEA6 /* LaunchAssembly.swift in Sources */,
 				FA60A88F2A72C1A700260CBD /* UIAlertAction+Utils.swift in Sources */,
 				FA60A8672A72B5F700260CBD /* BaseViewController.swift in Sources */,
 				FA60A8962A72C68C00260CBD /* CameraViewController.swift in Sources */,

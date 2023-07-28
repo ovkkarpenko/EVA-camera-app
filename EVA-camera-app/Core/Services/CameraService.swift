@@ -24,6 +24,7 @@ protocol CameraServiceDelegate: AnyObject {
     func cameraServiceStart(_ cameraService: CameraService, mode: CameraMode)
     func cameraServiceFinish(_ cameraService: CameraService, mode: CameraMode)
     func cameraServiceError(_ cameraService: CameraService)
+    func cameraServiceSetupIsComplete(_ cameraService: CameraService)
 }
 
 enum CameraMode: Int, CaseIterable {
@@ -119,6 +120,7 @@ final class CameraService: NSObject, ICameraService {
         }
         
         captureSession.commitConfiguration()
+        delegate?.cameraServiceSetupIsComplete(self)
     }
     
     private func getInput() -> AVCaptureDeviceInput? {

@@ -12,6 +12,10 @@ protocol LaunchModuleOutput: AnyObject {
     func launchDidOpenHome()
 }
 
+protocol ILaunchViewController: UIViewController {
+    func reloadView(with model: LaunchModel)
+}
+
 final class LaunchViewController: BaseViewController {
     
     // Dependencies
@@ -49,11 +53,12 @@ final class LaunchViewController: BaseViewController {
     }
 }
 
-// MARK: - LaunchViewDelegate
+// MARK: - ILaunchViewController
 
-extension LaunchViewController: LaunchViewDelegate {
-    func reloadView() {
-        titleLabel.text = viewModel.title
+extension LaunchViewController: ILaunchViewController {
+    func reloadView(with model: LaunchModel) {
+        titleLabel.text = model.title
+        permissionButton.setTitle(model.permissionButtonText, for: .normal)
     }
 }
 
@@ -84,7 +89,6 @@ extension LaunchViewController {
     private func setupPermissionButton() {
         permissionButton.tintColor = R.color.link()
         permissionButton.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
-        permissionButton.setTitle(R.string.localizable.general_allow(), for: .normal)
         permissionButton.layer.cornerRadius = 6
         permissionButton.layer.borderWidth = 1
         permissionButton.layer.borderColor = R.color.border()?.cgColor

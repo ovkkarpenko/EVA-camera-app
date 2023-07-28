@@ -35,7 +35,7 @@ final class CameraAssembly {
         )
         let view: CameraViewController = CameraViewController(viewModel: viewModel)
         
-        viewModel.delegate = view
+        viewModel.view = view
         
         return view
     }

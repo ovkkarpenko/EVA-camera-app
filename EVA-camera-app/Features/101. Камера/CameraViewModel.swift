@@ -16,16 +16,15 @@ protocol ICameraViewModel {
     func didTapCameraMode(index: Int)
 }
 
-protocol CameraViewDelegate: UIViewController {
-    func reloadView(isRecording: Bool)
-    func setupPreviewLayer(with captureSession: AVCaptureSession)
-}
-
 final class CameraViewModel {
     // Dependencies
-    weak var delegate: CameraViewDelegate?
+    weak var view: ICameraViewController?
     private let cameraService: ICameraService
     private let viewModelFactory: ICameraViewModelFactory
+    
+    // Properties
+    private var isLoading: Bool = true
+    private var isRecording: Bool = false
     
     // MARK: - Initializers
     
@@ -36,16 +35,27 @@ final class CameraViewModel {
         self.cameraService = cameraService
         self.viewModelFactory = viewModelFactory
     }
+    
+    // MARK: - Private
+    
+    private func updateView() {
+        view?.reloadView(with: viewModelFactory.makeCameraModel(isLoading: isLoading, isRecording: isRecording))
+    }
 }
 
 // MARK: - ICameraViewModel
 
 extension CameraViewModel: ICameraViewModel {
     func didLoad() {
+        isLoading = true
+        updateView()
+        
         cameraService.setDelegate(self)
         cameraService.startRunning { [weak self] captureSession in
             guard let captureSession = captureSession else { return }
-            self?.delegate?.setupPreviewLayer(with: captureSession)
+            self?.isLoading = false
+            self?.updateView()
+            self?.view?.setupPreviewLayer(with: captureSession)
         }
     }
     
@@ -54,11 +64,15 @@ extension CameraViewModel: ICameraViewModel {
     }
     
     func didTapSwitchCamera() {
+        isLoading = true
+        updateView()
         cameraService.switchCamera()
     }
     
     func didTapCameraMode(index: Int) {
         guard let mode = CameraMode(rawValue: index) else { return }
+        isLoading = true
+        updateView()
         cameraService.switchMode(mode)
     }
 }
@@ -67,17 +81,23 @@ extension CameraViewModel: ICameraViewModel {
 
 extension CameraViewModel: CameraServiceDelegate {
     func cameraService(_ cameraService: CameraService, isRecording: Bool) {
-        delegate?.reloadView(isRecording: isRecording)
+        self.isRecording = isRecording
+        updateView()
     }
     
     func cameraServiceError(_ cameraService: CameraService) {
         let alert: AlertModel = viewModelFactory.makeErrorAlertModel()
         
-        delegate?.showAlert { configurator in
+        view?.showAlert { configurator in
             configurator.title = alert.title
             configurator.message = alert.description
-            configurator.actions = [.default(title: alert.buttonText)]
+            configurator.actions = [.default(title: alert.defaultButtonText)]
         }
+    }
+    
+    func cameraServiceSetupIsComplete(_ cameraService: CameraService) {
+        isLoading = false
+        updateView()
     }
     
     func cameraServiceStart(_ cameraService: CameraService, mode: CameraMode) {
@@ -93,10 +113,10 @@ extension CameraViewModel: CameraServiceDelegate {
         
         let alert: AlertModel = viewModelFactory.makeFinishAlertModel(mode: mode)
         
-        delegate?.showAlert { configurator in
+        view?.showAlert { configurator in
             configurator.title = alert.title
             configurator.message = alert.description
-            configurator.actions = [.default(title: alert.buttonText)]
+            configurator.actions = [.default(title: alert.defaultButtonText)]
         }
     }
 }

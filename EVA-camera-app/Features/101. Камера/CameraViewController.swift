@@ -8,8 +8,12 @@
 import UIKit
 import AVFoundation
 
+protocol ICameraViewController: UIViewController {
+    func reloadView(with model: CameraModel)
+    func setupPreviewLayer(with captureSession: AVCaptureSession)
+}
+
 final class CameraViewController: BaseViewController {
-    
     // Dependencies
     private let viewModel: ICameraViewModel
     
@@ -60,16 +64,18 @@ final class CameraViewController: BaseViewController {
     }
 }
 
-// MARK: - CameraViewDelegate
+// MARK: - ICameraViewController
 
-extension CameraViewController: CameraViewDelegate {
-    func reloadView(isRecording: Bool) {
-        actionButton.setImage(
-            isRecording
-                ? R.image.ic_camera_stop()?.withRenderingMode(.alwaysTemplate)
-                : R.image.ic_camera()?.withRenderingMode(.alwaysTemplate),
-            for: .normal
-        )
+extension CameraViewController: ICameraViewController {
+    func reloadView(with model: CameraModel) {
+        actionButton.setImage(model.actionButtonImage, for: .normal)
+        switchCameraButton.setImage(model.switchCameraButtonImage, for: .normal)
+        
+        loadingLabel.isHidden = !model.isLoading
+        previewLayer?.isHidden = model.isLoading
+        actionButton.isHidden = model.isLoading
+        cameraModeSegment.isHidden = model.isLoading
+        switchCameraButton.isHidden = model.isLoading
     }
     
     func setupPreviewLayer(with captureSession: AVCaptureSession) {
@@ -80,11 +86,6 @@ extension CameraViewController: CameraViewDelegate {
         self.previewLayer = nil
         self.previewLayer = previewLayer
         view.layer.insertSublayer(previewLayer, at: 0)
-        
-        loadingLabel.isHidden = true
-        actionButton.isHidden = false
-        cameraModeSegment.isHidden = false
-        switchCameraButton.isHidden = false
     }
 }
 
@@ -115,7 +116,6 @@ extension CameraViewController {
     }
     
     private func setupActionButton() {
-        actionButton.isHidden = true
         actionButton.tintColor = R.color.image()
         actionButton.addTarget(self, action: #selector(actionTap), for: .touchUpInside)
         
@@ -128,9 +128,7 @@ extension CameraViewController {
     }
     
     private func setupSwitchCameraButton() {
-        switchCameraButton.isHidden = true
         switchCameraButton.tintColor = R.color.image()
-        switchCameraButton.setImage(R.image.ic_camera_switch()?.withRenderingMode(.alwaysTemplate), for: .normal)
         switchCameraButton.addTarget(self, action: #selector(switchCameraTap), for: .touchUpInside)
         
         view.addSubview(switchCameraButton)
@@ -142,7 +140,6 @@ extension CameraViewController {
     }
     
     private func setupCameraModeSegment() {
-        cameraModeSegment.isHidden = true
         cameraModeSegment.selectedSegmentIndex = 0
         cameraModeSegment.selectedSegmentTintColor = R.color.link()
         cameraModeSegment.layer.borderWidth = 1

@@ -14,20 +14,28 @@ protocol ILaunchAssembly {
 final class LaunchAssembly {
     // Dependencies
     private let permissionService: IPermissionService
+    private let viewModelFactory: ILaunchViewModelFactory
     
     // MARK: - Initializers
     
-    init(permissionService: IPermissionService = PermissionService()) {
+    init(
+        permissionService: IPermissionService = PermissionService(),
+        viewModelFactory: ILaunchViewModelFactory = LaunchViewModelFactory()
+    ) {
         self.permissionService = permissionService
+        self.viewModelFactory = viewModelFactory
     }
     
     // MARK: - ILaunchAssembly
     
     func assembly(output: LaunchModuleOutput?) -> LaunchViewController {
-        let viewModel: LaunchViewModel = LaunchViewModel(permissionService: permissionService)
+        let viewModel: LaunchViewModel = LaunchViewModel(
+            permissionService: permissionService,
+            viewModelFactory: viewModelFactory
+        )
         let view: LaunchViewController = LaunchViewController(viewModel: viewModel)
         
-        viewModel.delegate = view
+        viewModel.view = view
         viewModel.output = output
         
         return view

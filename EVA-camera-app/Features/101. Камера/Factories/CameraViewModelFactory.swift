@@ -8,6 +8,7 @@
 import Foundation
 
 protocol ICameraViewModelFactory {
+    func makeCameraModel(isLoading: Bool, isRecording: Bool) -> CameraModel
     func makeErrorAlertModel() -> AlertModel
     func makeFinishAlertModel(mode: CameraMode) -> AlertModel
 }
@@ -15,11 +16,22 @@ protocol ICameraViewModelFactory {
 final class CameraViewModelFactory: ICameraViewModelFactory {
     // MARK: - ICameraViewModelFactory
     
+    func makeCameraModel(isLoading: Bool, isRecording: Bool) -> CameraModel {
+        CameraModel(
+            isLoading: isLoading,
+            actionButtonImage: isRecording
+                ? R.image.ic_camera_stop()?.withRenderingMode(.alwaysTemplate)
+                : R.image.ic_camera()?.withRenderingMode(.alwaysTemplate),
+            switchCameraButtonImage: R.image.ic_camera_switch()?.withRenderingMode(.alwaysTemplate)
+        )
+    }
+    
     func makeErrorAlertModel() -> AlertModel {
         AlertModel(
             title: R.string.localizable.general_error(),
             description: R.string.localizable.general_unexpected_error(),
-            buttonText: R.string.localizable.general_ok()
+            defaultButtonText: R.string.localizable.general_ok(),
+            cancelButtonText: nil
         )
     }
     
@@ -29,7 +41,8 @@ final class CameraViewModelFactory: ICameraViewModelFactory {
             description: mode == .photo
                 ? R.string.localizable.camera_photo_success()
                 : R.string.localizable.camera_video_success(),
-            buttonText: R.string.localizable.general_ok()
+            defaultButtonText: R.string.localizable.general_ok(),
+            cancelButtonText: nil
         )
     }
 }
