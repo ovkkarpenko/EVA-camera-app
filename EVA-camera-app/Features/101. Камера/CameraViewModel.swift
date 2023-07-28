@@ -64,15 +64,11 @@ extension CameraViewModel: ICameraViewModel {
     }
     
     func didTapSwitchCamera() {
-        isLoading = true
-        updateView()
         cameraService.switchCamera()
     }
     
     func didTapCameraMode(index: Int) {
         guard let mode = CameraMode(rawValue: index) else { return }
-        isLoading = true
-        updateView()
         cameraService.switchMode(mode)
     }
 }
@@ -93,11 +89,6 @@ extension CameraViewModel: CameraServiceDelegate {
             configurator.message = alert.description
             configurator.actions = [.default(title: alert.defaultButtonText)]
         }
-    }
-    
-    func cameraServiceSetupIsComplete(_ cameraService: CameraService) {
-        isLoading = false
-        updateView()
     }
     
     func cameraServiceStart(_ cameraService: CameraService, mode: CameraMode) {
